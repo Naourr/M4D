@@ -1,0 +1,32 @@
+@import url(colors.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bglight);
+    color: var(--textdark);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+
+/* #top {
+
+} */
+
+/* START */
+
