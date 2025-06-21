@@ -1,0 +1,24 @@
+#services {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0px;
+}
+#service1, #service2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+}
+#service2 {
+    background-color: var(--bgdif);
+}
+.textbox1, .textbox2 {
+    width: 40vw;
+
+} #service1 img, #service2 img {
+    
+    width: 200px;
+}

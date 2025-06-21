@@ -1,4 +1,8 @@
 @import url(colors.css);
+@import url(hero.css);
+@import url(about.css);
+@import url(services.css);
+@import url(contact.css);
 
 * {
     box-sizing: border-box;
@@ -24,9 +28,81 @@ a {
     text-decoration: none;
 }
 
-/* #top {
-
-} */
+#top {
+    height: 60px;
+}
 
 /* START */
 
+nav {
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--bglighttint);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#navleft {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+}
+#logo {
+    border-radius: 50%;
+}
+#navright {
+    display: flex;
+    margin-right: 1rem;
+    gap: 1rem;
+}
+.navlinks a {
+    color: var(--textdark);
+}
+
+section {
+    width: 100vw;
+}
+
+.sectiontitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: var(--bglighttint);
+    padding: 2rem 0px;
+}
+
+.footerrow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.footerrow img {
+    border-radius: 15px;
+}
+.links a {
+   color: purple;
+}
+
+.footerbottom {
+    padding: 2rem 2rem 0rem 2rem;
+    
+}
+.footerbottom p {
+    font-size: 1rem;
+}

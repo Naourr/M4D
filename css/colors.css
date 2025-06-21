@@ -1,7 +1,8 @@
 :root {
     --bglight: white;
     --bglighttint: powderblue;
+    --bgdif: rgb(221, 221, 221);
     --textdark: black;
     --textlight: white;
-    --accent: rgb(0, 80, 199);
+    --accent: rgb(0, 80, 200);
 }

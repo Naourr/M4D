@@ -1,0 +1,12 @@
+.article img {
+    float: inline-start;
+    margin: 0px 3rem 3rem 0px;
+}
+.article {
+    width: 100%;
+}
+#about {
+    background-color: var(--bgdif);
+    padding: 2rem;
+    height: fit-content;
+}
