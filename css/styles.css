@@ -1,108 +1,168 @@
-@import url(colors.css);
-@import url(hero.css);
-@import url(about.css);
-@import url(services.css);
-@import url(contact.css);
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-body {
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--bglight);
-    color: var(--textdark);
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-body::-webkit-scrollbar {
-    display: none;
+:root {
+    --bg: rgb(8, 8, 75);
+    --accent: rgb(0, 204, 204);
+    --gray: rgb(34, 34, 34);
+    --textlight: white;
+    --textdark: black;
 }
 html {
-    scroll-behavior: smooth;
     overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
 }
-
-#top {
-    height: 60px;
-}
-
-/* START */
-
 nav {
-    position: fixed;
-    top: 0px;
-    left:0px;
-    width: 100vw;
-    height: 60px;
-    background-color: var(--bglighttint);
+    background-color: var(--gray) ;
+    color: var(--textlight);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    height: 60px;
+    padding: 0px 3rem;
 }
-#navleft {
-    margin-left: 1rem;
+nav .navlogo {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     gap: 1rem;
+    margin-right: 2rem;
 }
-#logo {
+nav .navlogo img {
     border-radius: 50%;
 }
-#navright {
+nav .navmenu {
     display: flex;
-    margin-right: 1rem;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
-.navlinks a {
-    color: var(--textdark);
+nav .navmenu a {
+    color: var(--textlight);
+    background: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1.5px solid white;
+    transition: all 0.3s ease-out;
 }
-
+nav .navmenu a:hover {
+    color: var(--textdark);
+    background-color: var(--accent);
+    border: 1.5px solid var(--accent);
+    transition: all 0.3s ease-out;
+    scale: 1.1;
+}
+nav .navmenu a:active {
+    background-color: rgb(128, 255, 255);
+    border-color: aqua;
+    transition: all 0.1s ease;
+}
 section {
     width: 100vw;
 }
-
-.sectiontitle {
+#hero {
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.herologo {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    width: 100%;
-    margin-bottom: 2rem;
+    padding: 4rem;
 }
-
-p {
+.herologo img {
+    flex-grow: 1;
+}
+.herotext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 50%;
+    gap: 1rem;
+    padding: 4rem;
+}
+.herotext a {
+    color: var(--textlight);
+    background-color: var(--bg);
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-align: center;
+    width: fit-content;
+    font-size: 1.2rem;
+}
+.herotext h1 {
+    font-size: 2.8rem;
+}
+.herotext h3 {
     font-size: 1.5rem;
 }
-
-footer {
-    background-color: var(--bglighttint);
-    padding: 2rem 0px;
+@media screen and (max-width:1000px) {
+    #hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .herologo {
+        height: fit-content;
+        padding: 0;
+        padding-bottom: 2rem;
+        margin: 0px 2rem;
+    }
+    .herologo img {
+        width: 300px;
+    }
+    .herotext {
+        width: 100%;
+        padding: 0 2rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:790px) {
+    nav {
+        padding: .8rem 2rem;
+    }
+    nav .navlogo, nav .navmenu {
+        gap: .6rem;
+    }
+    nav .navlogo h1 {
+        font-size: 1.2rem;
+    }
+    nav .navmenu a {
+        scale: 0.8;
+    }
 }
 
-.footerrow {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
+@media screen and (max-width:630px) {
+    nav .navlogo h1 {
+        font-size: 1rem;
+    }
+    .herotext h1 {
+        font-size: 2rem;
+    }
+    .herotext h3 {
+        font-size: 1.5rem;
+    } 
+    .herotext a {
+        font-size: 1rem;
+    }
 }
-.footerrow img {
-    border-radius: 15px;
-}
-.links a {
-   color: purple;
-}
-
-.footerbottom {
-    padding: 2rem 2rem 0rem 2rem;
-    
-}
-.footerbottom p {
-    font-size: 1rem;
+@media screen and (max-width:580px) {
+    nav {
+        padding: .8rem 1rem;
+    }
+    nav .navlogo {
+        gap: .8rem;
+    } 
+    nav .navmenu {
+        gap: 0rem;
+    }
 }
