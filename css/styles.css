@@ -81,14 +81,24 @@ section {
     flex-grow: 1;
 }
 .herotext {
+    width: 50%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.herotextbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    width: 50%;
     gap: 1rem;
-    padding: 4rem;
+    width: 80%;
+    height: 100%;
+
 }
+
 .herotext a {
     color: var(--textlight);
     background-color: var(--bg);
@@ -100,6 +110,7 @@ section {
 }
 .herotext h1 {
     font-size: 2.8rem;
+
 }
 .herotext h3 {
     font-size: 1.5rem;
