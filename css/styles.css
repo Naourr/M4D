@@ -1,179 +1,207 @@
 :root {
-    --bg: rgb(8, 8, 75);
-    --accent: rgb(0, 204, 204);
-    --gray: rgb(34, 34, 34);
-    --textlight: white;
+    --bg1: white;
+    --bg2: rgb(40, 40, 40);
+    --accent1: rgb(0, 135, 255);
+    --accent1light: cyan;
+    --accent2: rgb(255, 115, 0);
     --textdark: black;
-}
-html {
-    overflow-x: hidden;
+    --textlight: white;
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 56px;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
+.behindnav {
+    height: 56px;
+}
+/* NAVBAR START */
+
 nav {
-    background-color: var(--gray) ;
-    color: var(--textlight);
+    width: 100vw;
+    height: 56px;
+    background-color: var(--bg2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.nav-contents {
+    width: 100%;
+    max-width: 1300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    padding: 0px 3rem;
+    margin: 1rem;
 }
-nav .navlogo {
+.nav-contents-left {
     display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-right: 2rem;
 }
-nav .navlogo img {
+.nav-contents-left img {
     border-radius: 50%;
 }
-nav .navmenu {
+.nav-contents-left h1 {
+    color: var(--textlight);
+}
+.menu-links {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
-nav .navmenu a {
+.menu-links a {
     color: var(--textlight);
-    background: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1.5px solid white;
-    transition: all 0.3s ease-out;
 }
-nav .navmenu a:hover {
-    color: var(--textdark);
-    background-color: var(--accent);
-    border: 1.5px solid var(--accent);
-    transition: all 0.3s ease-out;
-    scale: 1.1;
+.menu-links a:hover {
+    color: var(--accent1light);
 }
-nav .navmenu a:active {
-    background-color: rgb(128, 255, 255);
-    border-color: aqua;
-    transition: all 0.1s ease;
-}
-section {
-    width: 100vw;
-}
+
+/* NAVBAR END */
+
+/* HERO START  */
+
 #hero {
-    height: calc(100vh - 60px);
+    width: 100vw;
+    height: fit-content;
+}
+.hero-contents {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    max-width: 1300px;
+    min-height: calc(100vh - 56px);
+    
 }
-.herologo {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem;
-}
-.herologo img {
-    flex-grow: 1;
-}
-.herotext {
-    width: 50%;
-    height: 100%;
-    padding: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.herotextbox {
+.textbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: flex-start;
+    text-align: left;
     gap: 1rem;
-    width: 80%;
-    height: 100%;
-
 }
-
-.herotext a {
-    color: var(--textlight);
-    background-color: var(--bg);
-    padding: 8px 15px;
+.textbox h1 {
+    font-size: 2rem;
+}
+.btns {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
+.button {
     border-radius: 20px;
-    text-align: center;
-    width: fit-content;
-    font-size: 1.2rem;
+    padding: 10px 15px;
 }
-.herotext h1 {
-    font-size: 2.8rem;
+.btn1 {
+    background-color: var(--accent1);
+    color: var(--textlight);
+    border: 2px solid var(--accent1);
+    transition: all 0.3s ease;
+}
+.btn1:hover {
+    background-color: transparent;
+    color: var(--textdark);
+    border: 2px solid var(--textdark);
+    transition: all 0.3s ease;
+}
+.btn2 {
+    background-color: transparent;
+    color: var(--textdark);
+    border: 2px solid var(--textdark);
+    transition: all 0.3s ease;
+}
+.btn2:hover {
+    background-color: var(--accent1);
+    color: var(--textlight);
+    border: 2px solid var(--accent1);
+    transition: all 0.3s ease;
+}
 
+/* HERO END */
+
+/* ABOUT START  */
+
+.title {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
-.herotext h3 {
+#about {
+    background-color: var(--bg2);
+    width: 100vw;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-contents {
+    width: 100%;
+    max-width: 1300px;
+    color: var(--textlight);
     font-size: 1.5rem;
 }
-@media screen and (max-width:1000px) {
-    #hero {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-    .herologo {
-        height: fit-content;
-        padding: 0;
-        padding-bottom: 2rem;
-        margin: 0px 2rem;
-    }
-    .herologo img {
-        width: 300px;
-    }
-    .herotext {
-        width: 100%;
-        padding: 0 2rem;
-        text-align: center;
-        align-items: center;
-    }
+.about-contents img {
+    float: left;
+    margin: 0 2rem 2rem 0;
+    border-radius: 10px;
 }
-@media screen and (max-width:790px) {
-    nav {
-        padding: .8rem 2rem;
-    }
-    nav .navlogo, nav .navmenu {
-        gap: .6rem;
-    }
-    nav .navlogo h1 {
-        font-size: 1.2rem;
-    }
-    nav .navmenu a {
-        scale: 0.8;
-    }
+.about-contents p {
+    text-align: justify;
 }
 
-@media screen and (max-width:630px) {
-    nav .navlogo h1 {
-        font-size: 1rem;
-    }
-    .herotext h1 {
-        font-size: 2rem;
-    }
-    .herotext h3 {
-        font-size: 1.5rem;
-    } 
-    .herotext a {
-        font-size: 1rem;
-    }
+/* ABOUT END */
+
+/* SERVICES START */
+
+#services {
+    width: 100vw;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-@media screen and (max-width:580px) {
-    nav {
-        padding: .8rem 1rem;
-    }
-    nav .navlogo {
-        gap: .8rem;
-    } 
-    nav .navmenu {
-        gap: 0rem;
-    }
+.services-contents {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 2rem;
+    justify-items: center;
+    align-items: normal;
 }
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.image {
+    width: 180px;
+    height: 180px;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+/* SERVICES END */
