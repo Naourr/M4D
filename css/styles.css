@@ -1,6 +1,6 @@
 :root {
     --bg1: white;
-    --bg2: rgb(40, 40, 40);
+    --bg2: rgb(4, 0, 65);
     --accent1: rgb(0, 135, 255);
     --accent1light: cyan;
     --textdark: black;
@@ -24,6 +24,7 @@ html::-webkit-scrollbar {
 body {
     overflow-x: hidden;
     text-overflow: ellipsis;
+    background-color: var(--bg1);
 }
 a {
     text-decoration: none;
