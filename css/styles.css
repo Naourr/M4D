@@ -3,7 +3,6 @@
     --bg2: rgb(40, 40, 40);
     --accent1: rgb(0, 135, 255);
     --accent1light: cyan;
-    --accent2: rgb(255, 115, 0);
     --textdark: black;
     --textlight: white;
 }
@@ -16,11 +15,15 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     scroll-padding-top: 56px;
+    text-overflow: ellipsis;
 }
 html::-webkit-scrollbar {
     display: none;
 }
-
+body {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
 a {
     text-decoration: none;
 }
