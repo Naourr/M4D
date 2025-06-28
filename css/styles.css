@@ -370,6 +370,9 @@ nav {
     gap: 1rem;
     padding: 1rem;
 }
+.contact-left {
+    gap: 0.8rem;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -495,7 +498,7 @@ form {
 }
 @media screen and (max-width: 400px) {
     .nav-contents-left h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 /* MEDIAS END */
