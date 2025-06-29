@@ -175,6 +175,23 @@ nav {
     align-items: flex-start;
     text-align: left;
     gap: 1rem;
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translate(-50vw, 0);
+}
+.textbox.in-view {
+    opacity: 1;
+    transition: all 1s ease;
+    transform: translate(0vw, 0);
+}
+.hero-right img {
+    opacity: 0;
+    transition: all 1s ease;
+}
+.hero-right img.in-view {
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: .2s;
 }
 .textbox h1 {
     font-size: 2rem;
@@ -241,7 +258,7 @@ nav {
     align-items: center;
 }
 #about2 {
-    background-color: var(--bg1);
+    background-color: transparent;
     width: 100vw;
     height: fit-content;
     padding: 4rem 3rem;
@@ -343,7 +360,7 @@ nav {
 #contact {
     width: 100%;
     height: fit-content;
-    background-color: var(--bg1);
+    background-color: transparent;
     color: var(--textdark);
     padding: 4rem 1rem 5rem 1rem;
 }
@@ -371,6 +388,21 @@ nav {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+}
+.contact-right.in-view {
+    animation-name: bounce;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    animation-duration: .3s;
+    animation-delay: .5s;
+}
+@keyframes bounce {
+    0% {
+    }
+    100% {
+        scale: 1.15;
+    }
 }
 .contact-left {
     gap: 0.8rem;
@@ -501,6 +533,11 @@ form {
 @media screen and (max-width: 400px) {
     .nav-contents-left h1 {
         font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 345px) {
+    .services-contents {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
 /* MEDIAS END */
