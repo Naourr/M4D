@@ -15,16 +15,16 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     scroll-padding-top: 56px;
-    text-overflow: ellipsis;
 }
 html::-webkit-scrollbar {
     display: none;
 }
-body {
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    background-color: var(--bg1);
+section {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 a {
     text-decoration: none;
