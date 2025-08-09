@@ -16,7 +16,7 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-padding-top: 56px;
     background-color: var(--bg1);
 }
@@ -24,7 +24,7 @@ html::-webkit-scrollbar {
     display: none;
 }
 section {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     scroll-snap-stop: always;
 }
 a {
